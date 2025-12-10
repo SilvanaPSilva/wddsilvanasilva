@@ -1,0 +1,25 @@
+/*8
+
+.(a dot) sale {
+    font-weight: bold; 
+    background-color: yellow;
+    font-family:'Segoe UI', Tahoma, sans-serif;
+}
+
+/*14
+body { background-color: yellow;}
+h1 { color: black;}
+h2 { color: red; }
+p { color: navy; }
+
+/*4*/
+body {
+ background-color: skyblue;
+}
+h1 {
+ color: navy;
+}
+
+span [title="first idea"] {
+  text-decoration:line-through;
+}

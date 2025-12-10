@@ -1,0 +1,100 @@
+:root{
+   --goat:#E9DEC7;/*logo color*/
+   --military:#2b310A;
+   --military2:#4A5A2D;/*logo color*/
+   --military3:#9da577;
+   --peru:#0a3b6f;   
+   --black:#222;
+   --white:#fff;
+   --light-black:#666;
+   --light-white:#ccc;
+   --light-bg:#f5f5f5;
+   --dark-bg:rgba(0,0,0,.7);
+   --border:.1rem solid #aaa;
+   --box-shadow:0 .5rem 1rem rgba(1,0,0,.1);
+}
+
+nav ul {
+    list-style: none; 
+    padding-left:0; 
+    font-size: 15em;     
+    background: var(--military3);
+}
+
+nav li {
+    display:inline;
+    font-size: 2rem;
+    color: var(--goat);
+    background: var(--military3);
+}
+
+.active {
+    color :var(--goat);
+    background-color:var(--military3);
+    padding:0.5em;
+}
+
+
+/* menu card */
+.card-header { 
+   background-color: var(--peru); 
+   font-weight: bold;
+   font-size: 1.2em;
+   color: #f9f9f9;
+   border: #050505;
+} 
+
+.py-5 {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #010000fe;
+}
+
+.card-text {
+    font-size: 1.1em;
+    color: #010000fe;
+}
+
+.display-6 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #010000fe;
+}
+
+.h4-mb-3 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #010000fe;
+}
+
+.card {
+  --bs-card-border-width: 3px;        /* mude para 4px, 5px, etc. */
+  --bs-card-border-color: var(--peru);  /* mude para a cor desejada */
+  border-radius: 12px 12px 0 0;   /* TL TR BR BL */
+  overflow: hidden;     
+}
+
+.row.row-cols-1.row-cols-md-2.g-4.mb-5 .card {
+  --bs-card-border-color: var(--peru);  /* cor usada pelas bordas do card */
+  border-color: var(--peru);            /* borda externa */
+}
+
+/* home page carousel images */
+.d-block {
+    margin: 0 auto; 
+    max-height: 500px; /* Ajuste conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
+}
+
+h1{
+    font-size: 3em;
+    font-weight: bold;
+    color: #010000fe;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+
+ 
+
+
+
