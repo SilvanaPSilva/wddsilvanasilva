@@ -38,9 +38,11 @@
           <li class="nav-item">
             <!-- Checkout com contador -->
             <a class="nav-link {{#if state.checkout}}active{{/if}} position-relative" href="/checkout">
-              <i class="bi bi-cart"></i> Cart {{#if cartCount}}
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                {{cartCount}} </span> {{/if}}
+              {{!-- <i class="bi bi-cart"></i> Cart {{#if cartCount}}
+              <span id="addBasket" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{cartCount}} </span> {{/if}} --}}
+                <i class="bi bi-cart"></i> Cart
+              <span id="addBasket" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
             </a>
           </li>
         </ul>

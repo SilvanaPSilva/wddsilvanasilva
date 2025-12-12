@@ -7,11 +7,33 @@
 let statusUserLogin = document.getElementById("status");
 let loggedin = localStorage.getItem('loggedIn'); // 1 or 0
 
-//     if(loggedin==null){
+// if(loggedin==null){
 //     localStorage.setItem('loggedIn','0');
     
 // } else
 
+// 1 create new item IF ITS NULL in local storage - count of  items in cart
+// 2 we will get this count from local storage
+// display count in checkout span
+
+/* 
+1 Give element id
+2 add eventelistener (action)
+3 inneer function (what to do when action happens)
+4 sign basket count for the element
+.. */
+
+let basketCount = localStorage.getItem("Cart")
+
+let updatebasket = document.getElementById("addBasket");
+console.log(updatebasket);
+
+
+if(basketCount == null || basketCount == 'undefined'){ 
+    localStorage.setItem("Cart",'0');    
+}
+
+updatebasket.innerHTML = basketCount;
 
 // >>>>>>>>>>>>>>>>>>>>>>>attencion for this part
 statusUserLogin.addEventListener('click', handleStatus);

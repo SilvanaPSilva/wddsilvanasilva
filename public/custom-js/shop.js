@@ -12,6 +12,7 @@ let allButtons = document.querySelectorAll('.btn-primary');
 
 allButtons.forEach(button => {
     button.addEventListener('click', addProduct);  
+    
 
 });
 
