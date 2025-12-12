@@ -3,16 +3,34 @@
 // amend and supplement in your project as you see fit
 
 // check if user is logged in or logged out..
-var loggedin = localStorage.getItem('loggedIn'); // 1 or 0
 
-if(loggedin==null){
+let statusUserLogin = document.getElementById("status");
+let loggedin = localStorage.getItem('loggedIn'); // 1 or 0
+
+//     if(loggedin==null){
+//     localStorage.setItem('loggedIn','0');
+    
+// } else
+
+statusUserLogin.addEventListener('click', handleStatus);
+
+function handleStatus(event) {
+    event.preventDefault();
+ if (loggedin==='1'){
     localStorage.setItem('loggedIn','0');
+    statusUserLogin.innerHTML="Login";
+    window.location.href = "/";
+
+} else {
+    window.location.href = "/login";
 }
+}
+
+
+
+
+//null>>default page
 checkLoginStatus()
-
-console.log("loggedin status: " + loggedin);
-
-console.log("custom.js loaded");
 
 // set the checkout figure
 // if (localStorage.getItem('checkout') == null) {  
@@ -40,23 +58,25 @@ console.log("custom.js loaded");
 // })
 
 
-
 // Show de user details section if is logged in and hide if not logged in
 function checkLoginStatus() {
     
-    var element = document.getElementById("details");
-    
+    let userDetail = document.getElementById("details");
+    let statusUser = document.getElementById("status");
+
    
     if (loggedin==='1') {
         //change the text from Login to Logout
-        element.classList.add("d-show");
-        element.classList.remove("d-none");
+        userDetail.classList.add("d-show");
+        userDetail.classList.remove("d-none");
+        statusUser.innerHTML="Logout";
               
         // show user details section
     } else{
 
-        element.classList.add("d-none");
-        element.classList.remove("d-show");
+        userDetail.classList.add("d-none");
+        userDetail.classList.remove("d-show");
+        statusUser.innerHTML="Login";
         // don't show user details section
         // document.querySelector('')
         // document.
