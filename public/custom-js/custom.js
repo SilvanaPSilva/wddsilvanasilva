@@ -35,6 +35,15 @@ if(basketCount == null || basketCount == 'undefined'){
 
 updatebasket.innerHTML = basketCount;
 
+
+
+
+
+
+
+
+
+
 // >>>>>>>>>>>>>>>>>>>>>>>attencion for this part
 statusUserLogin.addEventListener('click', handleStatus);
 

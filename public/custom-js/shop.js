@@ -12,14 +12,32 @@ let allButtons = document.querySelectorAll('.btn-primary');
 
 allButtons.forEach(button => {
     button.addEventListener('click', addProduct);  
-    
+
 
 });
+
+// 1 get saved total from localstorage
+// 2 add one to the total
+// 3 save the total back to localstorage
+// 4 update the display on the page
 
 function addProduct(event) {
 
     event.preventDefault();
-    console.log("Button clicked");
+    localStorage.getItem('Cart');
+    
+    let basketCount = localStorage.getItem('Cart');
+    basketCount++;
+    console.log(basketCount);
+    localStorage.setItem('Cart', basketCount);
+    
+    let updatebasket = document.getElementById("addBasket");
+
+    updatebasket.innerHTML = basketCount;
+    
+    // localStorage.setItem('checkout',total);
+    // document.querySelector('#checkout').innerHTML=total;
+
 
 }
 
