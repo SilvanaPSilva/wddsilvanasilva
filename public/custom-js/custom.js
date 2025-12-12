@@ -12,6 +12,8 @@ let loggedin = localStorage.getItem('loggedIn'); // 1 or 0
     
 // } else
 
+
+// >>>>>>>>>>>>>>>>>>>>>>>attencion for this part
 statusUserLogin.addEventListener('click', handleStatus);
 
 function handleStatus(event) {
