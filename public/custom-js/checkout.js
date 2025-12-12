@@ -1,4 +1,23 @@
 // checkout.js
+/* 
+cant go to checkout if not logged in ok
+If correct detail
+1 - Input card data
+2 - Click button buyIt
+3 - Go to Page TkankYou
+
+if is not
+backt to infomaticon detail
+Display incorrect data
+
+*/
+
+let isLoggedIn=localStorage.getItem('loggedIn'); 
+if (isLoggedIn==='0') {
+    window.location.href = "/login";  // redirect to login page
+}
+
+
 
 var checkout = document.getElementById('buy-now');
 // add a listener for add to cart if such a button id is pressed
@@ -7,10 +26,10 @@ element.style.display = 'none';
 var element = document.getElementById("payment-success");
 element.style.display = 'none';
 
-var loggedin=localStorage.getItem('loggedIn'); 
-if (loggedin==0) {
+/* var isLoggedIn=localStorage.getItem('loggedIn'); 
+if (isLoggedIn==0) {
     window.location.href = "login.html";  // redirect to login page
-}
+} */
 // add a listener so that we run this code and preventdefault for submit...
 checkout.addEventListener("click", (event) => {
     event.preventDefault();
