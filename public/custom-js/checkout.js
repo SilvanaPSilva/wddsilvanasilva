@@ -22,19 +22,18 @@ let buttonBuy = document.getElementById("buy-now")
 
 buttonBuy.addEventListener("click", (event) =>{
     event.preventDefault()
-    if(checkCVV==="123")
-        
-
+    if(checkCVV === "123") {
+        console.log("CVV is valid")
+    } else {
+        console.log("CVV is invalid")
+    }
 })
 
-
-
-
-var checkout = document.getElementById('buy-now');
+const checkout = document.getElementById('buy-now');
 // add a listener for add to cart if such a button id is pressed
-var element = document.getElementById("payment-failure");
-element.style.display = 'none';
-var element = document.getElementById("payment-success");
+const paymentFailure = document.getElementById("payment-failure");
+paymentFailure.style.display = 'none';
+const paymentSucessful = document.getElementById("payment-success");
 element.style.display = 'none';
 
 /* var isLoggedIn=localStorage.getItem('loggedIn'); 
@@ -68,12 +67,8 @@ checkout.addEventListener("click", (event) => {
         element.style.display = 'none';
         //element.classList.add("d-none");
         var element = document.getElementById("payment-failure");
-        //element.classList.remove("d-none");
- 
-    }
-
-
-    
+        //element.classList.remove("d-none"); 
+    }   
     
 })
 
