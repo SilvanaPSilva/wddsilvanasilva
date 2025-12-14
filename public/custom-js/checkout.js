@@ -17,6 +17,17 @@ if (isLoggedIn==='0') {
     window.location.href = "/login";  // redirect to login page
 }
 
+let checkCVV = document.getElementById("cardCvv")
+let buttonBuy = document.getElementById("buy-now")
+
+buttonBuy.addEventListener("click", (event) =>{
+    event.preventDefault()
+    if(checkCVV==="123")
+        
+
+})
+
+
 
 
 var checkout = document.getElementById('buy-now');
