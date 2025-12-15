@@ -12,29 +12,29 @@ Display incorrect data
 
 */
 
-let isLoggedIn=localStorage.getItem('loggedIn'); 
-if (isLoggedIn==='0') {
+let isLoggedIn = localStorage.getItem('loggedIn');
+if (isLoggedIn === '0') {
     window.location.href = "/login";  // redirect to login page
 }
 
 let checkCVV = document.getElementById("cardCvv")
 let buttonBuy = document.getElementById("buy-now")
 
-buttonBuy.addEventListener("click", (event) =>{
+buttonBuy.addEventListener("click", (event) => {
     event.preventDefault()
-    if(checkCVV === "123") {
+    if (checkCVV.value === "123") {
         console.log("CVV is valid")
     } else {
         console.log("CVV is invalid")
     }
 })
 
-const checkout = document.getElementById('buy-now');
+let checkout = document.getElementById('buy-now');
 // add a listener for add to cart if such a button id is pressed
-const paymentFailure = document.getElementById("payment-failure");
+let paymentFailure = document.getElementById("payment-failure");
 paymentFailure.style.display = 'none';
-const paymentSucessful = document.getElementById("payment-success");
-element.style.display = 'none';
+let paymentSucessful = document.getElementById("payment-success");
+paymentSucessful.style.display = 'none';
 
 /* var isLoggedIn=localStorage.getItem('loggedIn'); 
 if (isLoggedIn==0) {
@@ -43,33 +43,41 @@ if (isLoggedIn==0) {
 // add a listener so that we run this code and preventdefault for submit...
 checkout.addEventListener("click", (event) => {
     event.preventDefault();
-    var cardnumber=document.getElementById('cardNumber').value;
-    var cardcvv=document.getElementById('cardCvv').value;
+    let cardNumber = document.getElementById('cardNumber').value;
+    let cardCvv = document.getElementById('cardCvv').value;
 
-    if (cardnumber=="1234 5678 9102 3456" && cardcvv=="123") {
-        alert("payment success");
-        var element = document.getElementById("payment-failure");
-        element.style.display = 'none';
+    if (cardNumber == "1234 5678 9102 3456" && cardCvv == "123") {
+        alert("Payment success");
+
         //element.classList.add("d-none"); // bootstrap hide
-        var element = document.getElementById("payment-success");
-        element.style.display = 'block';
+        var statusPayment = document.getElementById("payment-failure");
+        statusPayment.style.display = 'none';
+
         //element.classList.remove("d-none"); // bootstrap hide
+        var statusPayment = document.getElementById("payment-success");
+        statusPayment.style.display = 'block';
+
         // now set cart total to zero
-        var total=0;
-        // makes sure that when we goto another page the total is zero 
-        localStorage.setItem('checkout',total); 
+        var total = 0;
+        // makes sure that when we got another page the total is zero         
+        localStorage.setItem('checkout', total);
+
+        //redirect to thank_you page
+        window.location.href = "/thank_you"
 
     } else {
-        alert("payment failure");
-        var element = document.getElementById("payment-failure");
-        element.style.display = 'block';
-        var element = document.getElementById("payment-success");
-        element.style.display = 'none';
+        alert("Payment failure");
+        var statusPayment = document.getElementById("payment-failure");
+        statusPayment.style.display = 'block';
+
+        var statusPayment = document.getElementById("payment-success");
+        statusPayment.style.display = 'none';
+
         //element.classList.add("d-none");
-        var element = document.getElementById("payment-failure");
+        var statusPayment = document.getElementById("payment-failure");
         //element.classList.remove("d-none"); 
-    }   
-    
+    }
+
 })
 
 
