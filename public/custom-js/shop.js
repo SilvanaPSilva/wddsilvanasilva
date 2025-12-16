@@ -7,6 +7,12 @@
 //     localStorage.setItem('checkout',total);
 //     document.querySelector('#checkout').innerHTML=total;
 // })
+(async () => {
+    const response = await fetch('items.json')
+    const data = await response.json()
+     console.log(data)
+  
+})();
 
 let allButtons = document.querySelectorAll('.btn-primary');
 
@@ -28,7 +34,7 @@ function addProduct(event) {
     
     let basketCount = localStorage.getItem('Cart');
     basketCount++;
-    console.log(basketCount);
+    // console.log(basketCount);
     localStorage.setItem('Cart', basketCount);
     
     let updatebasket = document.getElementById("addBasket");
