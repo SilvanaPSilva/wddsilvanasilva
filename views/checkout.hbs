@@ -1,8 +1,18 @@
 <body>
   <main>
     <div>
+      <section id="cart-item" class="mb-4">
+        <h2>Cart Detail</h2>
+
+        <div id="shopList" class="list"></div>
+        <p class="fw-bold mt-3">Total: €<span id="total">0.00</span></p>
+
+      </section>
+
+
       <div>
         <form name="checkout" id="user-checkout" action="" method="get">
+
           <fieldset>
             <legend>Delivery Details</legend>
 
@@ -48,7 +58,7 @@
     </div>
 
   </main>
-  <script src="custom-js/custom.js"></script>  
+  <script src="custom-js/custom.js"></script>
   <script src="custom-js/checkout.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

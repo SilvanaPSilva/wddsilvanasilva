@@ -11,12 +11,13 @@ backt to infomaticon detail
 Display incorrect data
 
 */
-
+//Check Login or Not
 let isLoggedIn = localStorage.getItem('loggedIn');
 if (isLoggedIn === '0') {
     window.location.href = "/login";  // redirect to login page
 }
 
+//Check CVV
 let checkCVV = document.getElementById("cardCvv")
 let buttonBuy = document.getElementById("buy-now")
 
@@ -29,6 +30,7 @@ buttonBuy.addEventListener("click", (event) => {
     }
 })
 
+//BuyNow button
 let checkout = document.getElementById('buy-now');
 // add a listener for add to cart if such a button id is pressed
 let paymentFailure = document.getElementById("payment-failure");
@@ -36,10 +38,7 @@ paymentFailure.style.display = 'none';
 let paymentSucessful = document.getElementById("payment-success");
 paymentSucessful.style.display = 'none';
 
-/* var isLoggedIn=localStorage.getItem('loggedIn'); 
-if (isLoggedIn==0) {
-    window.location.href = "login.html";  // redirect to login page
-} */
+
 // add a listener so that we run this code and preventdefault for submit...
 checkout.addEventListener("click", (event) => {
     event.preventDefault();
@@ -79,5 +78,22 @@ checkout.addEventListener("click", (event) => {
     }
 
 })
+
+const productsList = JSON.parse(localStorage.getItem("Cart")) || [];
+let shopList = document.getElementById("shopList")
+let totalProducts = document.getElementById("total")
+
+let total = 0
+
+productsList.forEach(product => {
+    const item = document.createElement("div")
+    item.className = "list"
+    item.innerHTML = `<span>${product.product_name}</span>
+                      <span>€${product.price.toFixed(2)}</span>`;
+    shopList.appendChild(item)
+    total += product.price;
+});
+// Display total
+totalProducts.innerText = total.toFixed(2);
 
 

@@ -22,8 +22,8 @@ allButtons.forEach(button => {
 // 4 update the display on the page
 
 function addProduct(event) {
-
     event.preventDefault();
+
     localStorage.getItem('Cart');
     
     let basketCount = localStorage.getItem('Cart');
@@ -35,8 +35,9 @@ function addProduct(event) {
 
     updatebasket.innerHTML = basketCount;
     
-    // localStorage.setItem('checkout',total);
-    // document.querySelector('#checkout').innerHTML=total;
+    localStorage.setItem('checkout',total);
+    
+    document.querySelector('#checkout').innerHTML=total;
 
 
 }
