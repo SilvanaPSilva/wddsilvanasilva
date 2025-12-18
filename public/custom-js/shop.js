@@ -10,16 +10,44 @@
 (async () => {
     const response = await fetch('items.json')
     const data = await response.json()
-     console.log(data)
+    console.log(data)
+    console.log(data.products)
+     
+    /*  renderCards(data, catalogueContainer, row); */
   
+    /* document.getElementById("shopSil") */
+    let shopTroller = document.getElementById("shopSil")
+    
+
+    //Get our main container (shopSil) for all cards
+    data.products.forEach(productSil => {
+    
+    const div = document.createElement("div")  
+
+    const img = document.createElement("img")
+    const divBody = document.createElement("div")
+    const h5 = document.createElement("h5")
+    const pDescription = document.createElement("p")
+    const pPrice = document.createElement("p")
+    const button = document.createElement("button")
+    
+    div.classList.add('card')
+    img.classList.add('card-img-top')
+    divBody.classList.add('card-body')
+    h5.classList.add('card-title')
+    pDescription.classList.add('card-text')
+    pPrice.classList.add('card-text','fw-bold', 'text-primary')
+    button.classList.add('btn', 'btn-primary')
+        
+});
+
+
+
 })();
 
 let allButtons = document.querySelectorAll('.btn-primary');
-
 allButtons.forEach(button => {
     button.addEventListener('click', addProduct);  
-
-
 });
 
 // 1 get saved total from localstorage
