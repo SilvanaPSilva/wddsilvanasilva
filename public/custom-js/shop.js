@@ -1,12 +1,12 @@
 // shop.js
 
-// document.getElementById('addtocart').addEventListener('click', () => {
+/* document.getElementById('addtocart').addEventListener('click', () => {
 
-//     var total=localStorage.getItem('checkout');
-//     total++;
-//     localStorage.setItem('checkout',total);
-//     document.querySelector('#checkout').innerHTML=total;
-// })
+var total=localStorage.getItem('checkout');
+total++;
+localStorage.setItem('checkout',total);
+document.querySelector('#checkout').innerHTML=total;
+}) */
 
 (async () => {
     //1 - Variable
@@ -63,6 +63,8 @@
 
         button.innerHTML = "Add to Cart"
 
+        button.id = productSil.product_id // every button has id (from json)
+
 
         //5 - Appedn Child
 
@@ -81,6 +83,7 @@
         button.addEventListener('click', addProduct);
     });
 
+
 })();// CALL ASYNC FUCTION --- END FUNCTION
 // 1 get saved total from localstorage
 // 2 add one to the total
@@ -90,29 +93,40 @@
 function addProduct(event) {
     event.preventDefault();
 
-    localStorage.getItem('Cart');
+    console.log(event.target);
 
+    localStorage.getItem('Cart');
     let basketCount = localStorage.getItem('Cart');
     basketCount++;
     // console.log(basketCount);
     localStorage.setItem('Cart', basketCount);
 
     let updatebasket = document.getElementById("addBasket");
-
     updatebasket.innerHTML = basketCount;
 
-    localStorage.setItem('checkout', total);
+    // localStorage.setItem('checkout', total);
+    // document.querySelector('#checkout').innerHTML = total;
 
-    document.querySelector('#checkout').innerHTML = total;
+    if(localStorage.getItem('addProd') === null || localStorage.getItem('addProd')===''){
+        let addProdNew=[]
+        addProdNew.push(event.target.id)
+        localStorage.setItem('addProd', addProdNew.toString())
+    } else{
+
+        //Get string from LocalStore
+       let storedAddProd = localStorage.getItem('addProd')
+        
+       // Split the string
+       let splitStoredAddProd = storedAddProd.split(',')
+        // Pust itm to array
+       splitStoredAddProd.push(event.target.id)
+        //Array ==>> "[5, 4, 3]" >> back to string
+       localStorage.setItem('addProd', splitStoredAddProd.toString())
+
+    }
 
 
 }
 
 
-/*
-1 - Select all button
-2-  WHEN Click on ANY button
-3 - THEN Count++ 
-4 - NEXT display change
- */
 
