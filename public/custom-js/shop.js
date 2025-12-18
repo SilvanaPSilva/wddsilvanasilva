@@ -83,7 +83,6 @@ document.querySelector('#checkout').innerHTML=total;
         button.addEventListener('click', addProduct);
     });
 
-
 })();// CALL ASYNC FUCTION --- END FUNCTION
 // 1 get saved total from localstorage
 // 2 add one to the total
