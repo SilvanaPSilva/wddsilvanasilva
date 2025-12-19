@@ -1,78 +1,131 @@
 <body>
   <div class="container">
-    <itemscope itemtype="http://schema.org/Restaurant">
-      <div class="row">
-
-        <div class="col-12">
-          <picture>
-            <source srcset="images/menupic/atlantic1.jpg" media="(max-width: 576px)">
-            <source srcset="images/menupic/brownie.jpg" media="(max-width: 768px)">
-            <img src="images/menupic/cesar1.jpg">
-          </picture>
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Bundoran Souvenir</h1>
+            <p class="lead">Gifts, Crafts & Memories from the Wild Atlantic Way</p>
         </div>
+    </header>
 
-        <div class="col-4">
-          <section class="openingHours" itemprop="openingHoursSpecification">
-            <i class="fas fa-clock"></i>
-            <h2>Opening Hours</h2>
+    <div class="container mb-5">
+        <div class="row g-5">
+            
+            <!-- Contact Form Section -->
+            <div class="col-lg-7">
+                <div class="contact-card bg-white p-4">
+                    <h3 class="mb-4 text-primary"><i class="bi bi-envelope-paper-heart me-2"></i>Send us a Message</h3>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Patrick" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Murphy" required>
+                            </div>
+                            
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="hello@example.com" required>
+                            </div>
 
-            <dl class="hours-list">
-              <dt>Monday to Saturday</dt>
-              <dd>
-                <time itemprop="openingHours" datetime="11:00">9am</time> -
-                <time itemprop="openingHours" datetime="19:00">7pm</time>
-              </dd>
-            </dl>
-          </section>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject">
+                                    <option selected>General Inquiry</option>
+                                    <option value="1">Product Availability</option>
+                                    <option value="2">Shipping & Returns</option>
+                                    <option value="3">Wholesale / Bulk Order</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="How can we help you today?" required></textarea>
+                            </div>
+
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-custom w-100">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Information Sidebar -->
+            <div class="col-lg-5">
+                <div class="info-box">
+                    <h4 class="mb-4">Visit Our Store</h4>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-geo-alt-fill info-icon"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5>Address</h5>
+                            <p class="text-muted mb-0">
+                                Main Street<br>
+                                Bundoran, Co. Donegal<br>
+                                F94 AE79, Ireland
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-telephone-fill info-icon"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5>Phone</h5>
+                            <p class="text-muted mb-0">
+                                <a href="tel:+353719841625" class="text-decoration-none text-muted">+353 (0)71 984 1625</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-envelope-at-fill info-icon"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5>Email</h5>
+                            <p class="text-muted mb-0">
+                                <a href="mailto:info@bundoransouvenir.ie" class="text-decoration-none text-muted">info@bundoransouvenir.ie</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-clock-fill info-icon"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5>Opening Hours</h5>
+                            <ul class="list-unstyled text-muted small">
+                                <li class="d-flex justify-content-between"><span>Mon - Sat:</span> <span>10:00 AM - 6:00 PM</span></li>
+                                <li class="d-flex justify-content-between"><span>Sunday:</span> <span>12:00 PM - 5:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Map (Placeholder Image) -->
+                    <div class="ratio ratio-16x9 rounded overflow-hidden mt-4">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9476.845624125!2d-8.2885994!3d54.4800649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485f7a2a0a2a0a2b%3A0x0!2zN6DCsDI4JzQ4LjIiTiA4wrAxNycxOS4wIlc!5e0!3m2!1sen!2sie!4v1630000000000!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-4">
-          <section class="contact" id="contactUs">
-            <i class="fas fa-phone"></i>
-            <h2>Contact</h2>
-            <p itemprop="telephone">
-              <a href="tel:+3530838972466">+353 083 897 2466</a>
-            </p>
-            <p itemprop="email">
-              <a href="mailto:bundoransoulvenir@donegal.ie">bundoransoulvenir@donegal.ie</a>
-            </p>
-          </section>
-        </div>
-        <div class="col-4">
-          <address class="footer-section" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    </div>
 
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Address</span>
+    <!-- Footer -->
+    <footer class="text-center py-4 text-muted border-top mt-auto">
+        <p class="mb-0">&copy; 2025 Bundoran Souvenir. All rights reserved.</p>
+        <small>Made with <i class="bi bi-heart-fill text-danger"></i> in Donegal</small>
+    </footer>
 
-            <p itemprop="streetAddress">Main Street</p>
-            <p>
-              <span itemprop="addressLocality">Bundoran</span>,
-              <span itemprop="addressRegion">Co. Donegal</span>
-            </p>
-            <p itemprop="postalCode">F94 XTF9</p>
-            <p itemprop="addressCountry">Ireland</p>
-            <a href="https://www.bing.com/maps?mepi=108%7E%7EUnknown%7EWeb_Annotation_Result&ty=18&q=blue+leaf+restaurant&ppois=54.479305267333984_-8.277853012084961_blue+leaf+restaurant_%7E&cp=54.277178%7E-8.503096&lvl=16.0&v=2&sV=1"
-              itemprop="hasMap" target="_blank" rel="noopener noreferrer">View on Map</a>
-          </address>
-        </div>
-        <nav class="social-links" aria-label="Social media links">
-          <a href="https://facebook.com/bundoransoulvenir" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://instagram.com/bundoransoulvenir" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </nav>
-
-        <aside class="copyright">
-          <p>
-            &copy; <span itemprop="copyrightYear">2025</span>
-            <span itemprop="name">Bundoran Soulvenir</span>.
-            Website by <span>Silvana Silva</span>.
-          </p>
-        </aside>
-
-      </div>
-  </div>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <script src="custom-js/custom.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
