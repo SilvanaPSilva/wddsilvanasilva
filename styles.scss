@@ -45,6 +45,8 @@ p {
    margin-bottom: 12px;
 }
 
+
+
 /* customize the appearance of scrollbarsr*/
 html::-webkit-scrollbar{
    width: 1rem;
@@ -118,30 +120,6 @@ html::-webkit-scrollbar-thumb{
 }
 
 
-/* the end customize the appearance of scrollbarsr*/
-/*
-main{
-   padding:1rem 5rem;
-   max-width: 1200px;
-   margin: 0 auto;   
-}
-*/
-/* H1, h2, h3
-.heading{
-   text-align: center;
-   margin-bottom: 3rem;
-}
-
-.heading span{
-   font-size: 2.5rem;
-   color:$peru;
-}
-
-.heading h3{
-   font-size: 4.5rem;
-   color:$black;
-}
-*/
 .btn{
    margin-top: 1rem;
    display: inline-block;
@@ -156,81 +134,8 @@ main{
    letter-spacing: .2rem;
 }
 
-/*Header
-.header{
-   box-shadow: var(--box-shadow);
-   position: sticky;
-   top:0; left:0; right: 0;
-   background: $white;
-   z-index: 1000;
-}
 
-.header .flex{
-   padding-top: 2rem;
-   padding-bottom: 0.5rem;
-   display: flex;
-   align-items: center;
-   justify-content:flex-start;
-}
-
-
-.header .logo{
-   font-size: 5.5rem;
-   font-weight: bolder;
-   color:$black;
-}
-
-.header .logo i{
-   color:$peru;
-   padding-right: .5rem;
-}
-*/
-
-/*Carousel
-https://www.youtube.com/watch?v=KD1Yo8a_Qis
-
-*/
-/* .carousel{
-   margin: 100px auto;
-   width: 90%;  
-   border: 5px solid var(--military4);
-   border-radius: 30px;
-   display: flex;  
-   overflow-x: auto;
-   gap: 1em; 
-}
-
-.carousel::-webkit-scrollbar{
-   display: none;
-}
-
-.group{
-   display: flex;
-    text-align: center;
-   justify-content: center;
-   gap: 1em; 
-   animation: spin 5s infinite linear;
-   padding-right: 1em ;
-}
-
-.card{
-   flex: 0 0 5em;
-   height: 5em;
-   padding: 1em;
-   background: $military3;
-   font-size: 3rem;
-   border-radius: .2em;
-   text-align: center;
-   align-content: center;
-}
-@keyframes spin{
-   from{translate: 0;}
-   to{translate: -100%;}
-} */
-
-
-/*Navbar*/
-
+/* ===== HEADER ===== */
 
 .navbar .navbar-nav .nav-item .nav-link {
    font-size: 2rem;

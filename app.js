@@ -94,22 +94,10 @@ app.get('/checkout', (req, res) => {
 });
 
 
-
-// Reservartion
-app.get('/booking', (req, res) => {
-  state={booking:true}
-  head={title: "Booking", description:"Book a table at The Blue Leaf Restaurant", keywords:"book, reservation, restaurant, food"}
-  // pass object to to render in "index"
-  res.render('booking', {state, head});
-  // send this to terminal where node app is running
-  console.log('booking')
-
-});
-
 // contact route
 app.get('/contact', (req, res) => {
     state={contact : true}
-    head={title:"contact", description:"Contact The Blue Leaf Restaurant", keywords:"contact, phone, email, restaurant, address"}
+    head={title:"contact", description:"Contact Bundoran Souvenir", keywords:"contact, phone, email, address"}
     res.render('contact', { state, head});
     console.log('contact')
   });
@@ -117,11 +105,14 @@ app.get('/contact', (req, res) => {
 
 
 //Thank you  
-app.get('/thank_you', (req, res) => {    
-  head={title:"Thank you", description:"Thank you for booking", keywords:"thank you, booking, reservation, restaurant"}
-    formDetails = {userEmail: req.query.email, userName: req.query.Name, userSurname: req.query.Surname,userSpecialRequest:req.query.special_request_text};
-    res.render('thank_you', { formDetails });    
-  });
+app.get('/thank_you_contact', (req, res) => {
+  state={booking:true}
+  head={title: "thank_you_contact", description:"Contact Bundoran Souvenir", keywords:"conctact, phone, email, address"}
+  res.render('thank_you_contact', {state, head});
+  // send this to terminal where node app is running
+  console.log('thank_you_contact')
+
+});
 
 
 // Start the server
