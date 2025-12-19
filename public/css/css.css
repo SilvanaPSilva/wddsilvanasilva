@@ -19,7 +19,7 @@
 
 *{
    font-family: 'Dosis', sans-serif;
-   margin:5px; padding:0;
+
    box-sizing: border-box;
    outline: none; border:none;
    text-decoration: none;
@@ -664,38 +664,8 @@ footer aside, footer aside p, footer aside p span{
 }
 
 
-/* ===== RESPONSIVIDADE GALLERY ===== */
-@media (max-width: 768px) {
-    .gallery-group {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-    
-    .gallery .heading h2 {
-      font-size: 2rem;
-    }
-  }
- 
 
- /* ===== RESPONSIVIDADE MENU ===== */
 
-@media (max-width: 480px) {
-    .menu-group-heading {
-       font-size: 1.5rem; /* Reduz tamanho do título */
-    }
-    .menu-item-name, .menu-item-price {
-       display: block; /* Preço em linha separada */
-    }
-}
-
- /* ===== RESPONSIVIDADE RESERVATION ===== */
-
-@media (max-width: 480px) {
-    .reservation-form input, 
-    .reservation-form select, 
-    .reservation-form textarea {
-       width: 100%; /* Campos ocupam largura total */
-    }
- }
 
 
 
