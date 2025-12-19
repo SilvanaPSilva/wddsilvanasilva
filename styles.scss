@@ -243,6 +243,11 @@ https://www.youtube.com/watch?v=KD1Yo8a_Qis
    padding: 0.2rem 1.5rem;
 }
 
+.nav-link {
+   font-size: clamp(1rem, 5vw + 1rem, 2rem);
+  
+}
+
 .navbar .navbar-nav .nav-item .nav-link:hover{
    background-color: $military2;
    color:black;
@@ -737,6 +742,7 @@ nav li {
 
 
 
+
 @media (max-width: 992px){
     body{
         background-color: $military;
@@ -798,6 +804,8 @@ nav li {
     }
 }
 
+
+
 @media (max-width: 768px){
     body{
         background-color: $military2;
@@ -813,3 +821,19 @@ nav li {
 
 
 
+@media (min-width: 992px) {
+   .navbar-expand-lg .navbar-collapse {
+      flex-grow: 0;
+   }
+}
+
+a.nav-link {
+   font-size: 2rem;
+    font-weight: bolder;
+    margin-left: 2rem;
+    color: #e9dec7;
+    border: #4a5a2d;
+    background: #2b310a;
+    border-radius: 30px;
+    padding: .2rem 1.5rem;
+}
