@@ -1,22 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap");
-:root {
-  --goat:#E9DEC7; /*logo color*/
-  --military:#2b310A;
-  --military2:#4A5A2D; /*logo color*/
-  --military3:#9da577;
-  --military4:#c3d9b2;
-  --peru:#0a3b6f;
-  --black:#222;
-  --white:#fff;
-  --light-black:#666;
-  --light-white:#ccc;
-  --light-bg:#f5f5f5;
-  --dark-bg:rgba(0,0,0,.7);
-  --border:.1rem solid #aaa;
-  --box-shadow:0 .5rem 1rem rgba(1,0,0,.1);
-}
-
+/*logo color*/
+/*logo color*/
 * {
   font-family: "Dosis", sans-serif;
   box-sizing: border-box;
@@ -25,7 +10,7 @@
   text-decoration: none;
   transition: all 0.4s cubic-bezier(0.43, 1.1, 0.62, 1.08);
   text-transform: capitalize;
-  background-color: var(--military3);
+  background-color: #9da577;
 }
 
 * > img {
@@ -37,7 +22,7 @@
 
 body {
   /* margin-left: 20PX; */
-  background: var(--military3);
+  background: #9da577;
 }
 
 html {
@@ -45,7 +30,7 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
-  background-color: var(--military3);
+  background-color: #9da577;
 }
 
 p {
@@ -59,11 +44,11 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background-color: var(--white);
+  background-color: #fff;
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: var(--peru);
+  background-color: #0a3b6f;
 }
 
 .d-block.w-100 {
@@ -88,39 +73,39 @@ html::-webkit-scrollbar-thumb {
   margin-top: 5px;
   font-size: 2rem;
   font-weight: bolder;
-  color: var(--military);
-  background: var(--goat);
+  color: #2b310A;
+  background: #E9DEC7;
 }
 
 .card-carousel-text-cover {
   font-size: 1.5rem;
   font-weight: bolder;
-  color: var(--military);
-  background: var(--goat);
+  color: #2b310A;
+  background: #E9DEC7;
   border-radius: 20px;
 }
 
 .carousel.btn.add-cart {
   font-size: 2rem;
   font-weight: bolder;
-  color: var(--military);
-  background: var(--goat);
+  color: #2b310A;
+  background: #E9DEC7;
   border-radius: 20px;
 }
 
 .card-info-cover {
   max-width: 60%; /* igual à imagem */
   margin: 0 auto;
-  background: var(--goat);
+  background: #E9DEC7;
   border-radius: 20px;
 }
 
 .card-carousel-cover,
 .card-carousel-text-cover,
 .carousel.btn.add-cart {
-  background: var(--goat); /* remove fundo individual */
+  background: #E9DEC7; /* remove fundo individual */
   margin-bottom: 0.5rem;
-  color: var(--military);
+  color: #2b310A;
   font-weight: bolder;
   border-radius: 20px;
 }
@@ -141,19 +126,19 @@ main{
 
 .heading span{
    font-size: 2.5rem;
-   color:var(--peru);
+   color:$peru;
 }
 
 .heading h3{
    font-size: 4.5rem;
-   color:var(--black);
+   color:$black;
 }
 */
 .btn {
   margin-top: 1rem;
   display: inline-block;
-  background: var(--peru);
-  color: var(--goat);
+  background: #0a3b6f;
+  color: #E9DEC7;
   font-size: 2rem;
   cursor: pointer;
   padding: 1rem 1rem;
@@ -168,7 +153,7 @@ main{
    box-shadow: var(--box-shadow);
    position: sticky;
    top:0; left:0; right: 0;
-   background: var(--white);
+   background: $white;
    z-index: 1000;
 }
 
@@ -184,11 +169,11 @@ main{
 .header .logo{
    font-size: 5.5rem;
    font-weight: bolder;
-   color:var(--black);
+   color:$black;
 }
 
 .header .logo i{
-   color:var(--peru);
+   color:$peru;
    padding-right: .5rem;
 }
 */
@@ -223,7 +208,7 @@ https://www.youtube.com/watch?v=KD1Yo8a_Qis
    flex: 0 0 5em;
    height: 5em;
    padding: 1em;
-   background: var(--military3);
+   background: $military3;
    font-size: 3rem;
    border-radius: .2em;
    text-align: center;
@@ -234,30 +219,19 @@ https://www.youtube.com/watch?v=KD1Yo8a_Qis
    to{translate: -100%;}
 } */
 /*Navbar*/
-navbar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--military3);
-  box-shadow: var(--box-shadow);
-  z-index: 1000;
-  padding: 1rem 2rem;
-}
-
 .navbar .navbar-nav .nav-item .nav-link {
   font-size: 2rem;
   font-weight: bolder;
   margin-left: 2rem;
-  color: var(--goat);
-  border: var(--military2);
-  background: var(--military);
+  color: #E9DEC7;
+  border: #4A5A2D;
+  background: #2b310A;
   border-radius: 30px;
   padding: 0.2rem 1.5rem;
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover {
-  background-color: var(--military2);
+  background-color: #4A5A2D;
   color: black;
 }
 
@@ -315,7 +289,7 @@ button:hover {
 
 /*Main | ABOUT US | Article > Section > Aside > Iframe*/
 .class_1 {
-  background-color: var(--peru);
+  background-color: #0a3b6f;
   padding: 20px;
 }
 
@@ -511,7 +485,6 @@ input, select {
 }
 
 .btn-submit {
-  background: var(--primary-color);
   padding: 1rem 2rem;
   border: 2px solid black;
   border-radius: 4px;
@@ -578,12 +551,12 @@ input, select {
 
 /*FOOTER*/
 footer {
-  background: var(--military);
-  color: var(--goat);
+  background: #2b310A;
+  color: #E9DEC7;
 }
 
 footer a {
-  color: var(--goat);
+  color: #E9DEC7;
   text-decoration: none;
 }
 
@@ -594,11 +567,11 @@ footer a[href^="tel:"] {
 
 aside.copyright p {
   margin: 2rem 0;
-  color: var(--goat);
+  color: #E9DEC7;
 }
 
 footer aside, footer aside p, footer aside p span {
-  background: var(--military);
+  background: #2b310A;
 }
 
 /**/
@@ -622,25 +595,25 @@ nav ul {
   list-style: none;
   padding-left: 0;
   font-size: 15em;
-  background: var(--military3);
+  background: #9da577;
 }
 
 nav li {
   display: inline;
   font-size: 2rem;
-  color: var(--goat);
-  background: var(--military3);
+  color: #E9DEC7;
+  background: #9da577;
 }
 
 .active {
-  color: var(--goat);
-  background-color: var(--military3);
+  color: #E9DEC7;
+  background-color: #9da577;
   padding: 0.5em;
 }
 
 /* menu card */
 .card-header {
-  background-color: var(--peru);
+  background-color: #0a3b6f;
   font-weight: bold;
   font-size: 1.2em;
   color: #f9f9f9;
@@ -672,14 +645,14 @@ nav li {
 
 .card {
   --bs-card-border-width: 3px; /* mude para 4px, 5px, etc. */
-  --bs-card-border-color: var(--peru); /* mude para a cor desejada */
+  --bs-card-border-color: $peru; /* mude para a cor desejada */
   border-radius: 12px 12px 0 0; /* TL TR BR BL */
   overflow: hidden;
 }
 
 .row.row-cols-1.row-cols-md-2.g-4.mb-5 .card {
-  --bs-card-border-color: var(--peru); /* cor usada pelas bordas do card */
-  border-color: var(--peru); /* borda externa */
+  --bs-card-border-color: $peru; /* cor usada pelas bordas do card */
+  border-color: #0a3b6f; /* borda externa */
 }
 
 /* home page carousel images */
@@ -697,18 +670,7 @@ h1 {
   margin: 20px 0px 20px 0px;
 }
 
-/**/
 :root {
-  --goat:#E9DEC7; /*logo color*/
-  --military:#2b310A;
-  --military2:#4A5A2D; /*logo color*/
-  --military3:#9da577;
-  --peru:#0a3b6f;
-  --black:#222;
-  --white:#fff;
-  --light-black:#666;
-  --light-white:#ccc;
-  --light-bg:#f5f5f5;
   --dark-bg:rgba(0,0,0,.7);
   --border:.1rem solid #aaa;
   --box-shadow:0 .5rem 1rem rgba(1,0,0,.1);
@@ -717,41 +679,41 @@ h1 {
 html, body {
   margin: 0 auto;
   padding: 0px;
-  background: var(--military3);
+  background: #9da577;
 }
 
 nav ul {
   list-style: none;
   padding-left: 0;
-  background: var(--military3);
+  background: #9da577;
 }
 
 nav li {
   display: inline;
-  background: var(--military3);
+  background: #9da577;
 }
 
 .active {
   color: white;
-  background-color: var(--military3);
+  background-color: #9da577;
   padding: 0.5em;
-  border: var(--military3);
+  border: #9da577;
   border-radius: 20px;
 }
 
 @media (max-width: 992px) {
   body {
-    background-color: var(--military);
+    background-color: #2b310A;
   }
 }
 @media (max-width: 768px) {
   body {
-    background-color: var(--military2);
+    background-color: #4A5A2D;
   }
 }
 @media (max-width: 576px) {
   body {
-    background-color: var(--military3);
+    background-color: #9da577;
   }
 }
 /* ===== RESPONSIVIDADE MAIN===== */
@@ -781,16 +743,16 @@ nav li {
 }
 @media (max-width: 992px) {
   body {
-    background-color: var(--military);
+    background-color: #2b310A;
   }
 }
 @media (max-width: 768px) {
   body {
-    background-color: var(--military2);
+    background-color: #4A5A2D;
   }
 }
 @media (max-width: 576px) {
   body {
-    background-color: var(--military3);
+    background-color: #9da577;
   }
 }/*# sourceMappingURL=styles.css.map */
