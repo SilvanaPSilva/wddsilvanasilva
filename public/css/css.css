@@ -584,23 +584,9 @@ input, select {
  /*FOOTER*/
 
 footer {
-  position: fixed;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 1.5rem;           /* Espaço confortável entre itens */
    background: var(--military);
    color: var(--goat);
-   padding: 8px 0;        /* Altura agradável (nem grosso, nem ralo) */
-   font-size: 0.95rem;    /* Fonte legível, mas discreta */
-   height: auto;          /* Ajusta conforme conteúdo */
-   min-height: 40px;      /* Altura mínima garantida */
-   z-index: 500;
-   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
-   box-sizing: border-box;
+
 }
 
 footer a {
