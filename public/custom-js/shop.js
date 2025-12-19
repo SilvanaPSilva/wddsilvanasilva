@@ -33,12 +33,13 @@ document.querySelector('#checkout').innerHTML=total;
 
         // Step 4_1 - Creating all the required for elements
         const divCard = document.createElement("div") // <div></div>
-        const img = document.createElement("img") // <img src="" alt="">
+        const img = document.createElement("img")         // <img src="" alt="">
         const divBody = document.createElement("div")
         const productName = document.createElement("h5")
         const pDescription = document.createElement("p")
         const pPrice = document.createElement("p")
         const button = document.createElement("button")  
+         
 
 
         // Step 4-2 - Element x Boostrap (Styling elements)
@@ -54,6 +55,11 @@ document.querySelector('#checkout').innerHTML=total;
         // Step 4_3 Element =  JSON (Link)
         if (typeof (productSil.img) !== 'undefined' && productSil.img.length !== 0 && productSil.img !== "unknown") {
             img.src = productSil.img
+            // <img class='card-img-top' src="images/wdbundoransouvenir.jpg" alt="">            
+        }
+
+        if (typeof (productSil.alt) !== 'undefined' && productSil.alt.length !== 0 && productSil.alt !== "unknown") {
+            img.alt = productSil.alt
             // <img class='card-img-top' src="images/wdbundoransouvenir.jpg" alt="">            
         }
 

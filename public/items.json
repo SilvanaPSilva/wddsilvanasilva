@@ -5,42 +5,48 @@
       "product_name": "T-Shirt",
       "desc": "Bundoran souvenir t-shirt with local designs. 100% cotton.",
       "price": 19.99,
-      "img": "images/wdbundoransouvenir.jpg"
+      "img": "images/wdbundoransouvenir.jpg",
+      "alt": "White Bundoran souvenir t-shirt featuring local coastal design"
     },
     {
       "product_id": 2,
       "product_name": "Official Bundoran FC",
       "desc": "Official Bundoran Football Club scarf. Wool blend.",
       "price": 24.99,
-      "img": "images/wdbundoranfc.jpg"
+      "img": "images/wdbundoranfc.jpg",
+      "alt": "Official Bundoran FC wool-blend scarf in team colours"
     },
     {
       "product_id": 3,
       "product_name": "I Love Bundoran - Mugge",
       "desc": "Ceramic mug with 'I Love Bundoran' print. Holds 350ml.",
       "price": 19.99,
-      "img": "images/wdmugge.jpg"
+      "img": "images/wdmugge.jpg",
+      "alt": "Ceramic mug with red heart and 'I Love Bundoran' print"
     },
     {
       "product_id": 4,
       "product_name": "Houses Bundoran - Mugge",
       "desc": "Ceramic mug with Houses Bundoran print. Holds 350ml.",
       "price": 19.99,
-      "img": "images/wdmugge3.jpg"
+      "img": "images/wdmugge3.jpg",
+      "alt": "Ceramic mug featuring colourful Bundoran houses illustration"
     },
     {
       "product_id": 5,
       "product_name": "Bundoran Keychain",
       "desc": "Souvenir keychain with Bundoran design.",
       "price": 9.99,
-      "img": "images/wdchaveiro.jpg"
+      "img": "images/wdchaveiro.jpg",
+      "alt": "Metal Bundoran souvenir keychain with coastal-themed design"
     },
     {
       "product_id": 6,
       "product_name": "Houses Bundoran - Mugge",
       "desc": "Ceramic mug with Houses Bundoran print. Holds 350ml.",
       "price": 19.99,
-      "img": "images/wdbundoranfc.jpg"
+      "img": "images/wdbundoranfc.jpg",
+      "alt": "Ceramic mug featuring Bundoran houses artwork"
     }
   ]
 }
