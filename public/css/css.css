@@ -618,6 +618,11 @@ aside.copyright p{
    color: var(--goat);
 }
 
+footer aside, footer aside p, footer aside p span{
+    background: var(--military);
+}
+
+
 
 
 
