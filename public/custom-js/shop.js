@@ -8,6 +8,8 @@ localStorage.setItem('checkout',total);
 document.querySelector('#checkout').innerHTML=total;
 }) */
 
+
+
 (async () => {
     //1 - Variable
     const response = await fetch('items.json') // 2 - FETCH
@@ -19,24 +21,30 @@ document.querySelector('#checkout').innerHTML=total;
 
     //3 - Get Container 
     /* document.getElementById("shopSil") */
-    let shopTroller = document.getElementById("shopSil")
+    let shopSil = document.getElementById("shopSil")
 
     // 4 - FOREACH
     //Get our main container (shopSil) for all cards
     data.products.forEach(productSil => {
 
+        const divColumn = document.createElement("div") // <div></div>
+        divColumn.classList.add('col')
+        
+
         // Step 4_1 - Creating all the required for elements
-        const div = document.createElement("div") // <div></div>
+        const divCard = document.createElement("div") // <div></div>
         const img = document.createElement("img") // <img src="" alt="">
         const divBody = document.createElement("div")
         const productName = document.createElement("h5")
         const pDescription = document.createElement("p")
         const pPrice = document.createElement("p")
-        const button = document.createElement("button")
+        const button = document.createElement("button")  
+
 
         // Step 4-2 - Element x Boostrap (Styling elements)
-        div.classList.add('card') // <div class='card'></div> 
-        img.classList.add('card-img-top') // <img class='card-img-top' src="" alt="">
+        divCard.classList.add('card') // <div class='card'></div> 
+        img.classList.add('card-img-top', 'w-100', 'd-block', 'object-fit-cover') // <img class='card-img-top' src="" alt="">
+        img.style.height = "250px"; // Recommended for e-commerce
         divBody.classList.add('card-body')
         productName.classList.add('card-title')
         pDescription.classList.add('card-text')
@@ -68,13 +76,16 @@ document.querySelector('#checkout').innerHTML=total;
 
         //5 - Appedn Child
 
-        shopSil.appendChild(div)
-        div.appendChild(img)
-        div.appendChild(divBody)
+        shopSil.appendChild(divColumn)       
+        divColumn.appendChild(divCard)
+
+        divCard.appendChild(img)
+        divCard.appendChild(divBody)
         divBody.appendChild(productName)
         divBody.appendChild(pDescription)
         divBody.appendChild(pPrice)
         divBody.appendChild(button)
+        
 
     });
 
